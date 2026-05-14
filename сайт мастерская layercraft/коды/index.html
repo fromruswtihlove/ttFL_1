@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LayerCraft — 3D‑печать игрушек и светильников</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="deco-container">
+  <div class="deco-hex"></div>
+  <div class="deco-hex"></div>
+  <div class="deco-hex"></div>
+  <div class="deco-extrude"></div>
+  <div class="deco-layers"></div>
+</div>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="./favicon.png" alt="LayerCraft">
+        <div class="name"><span class="layer">Layer</span><span class="craft">Craft</span></div>
+      </a>
+<nav class="menu">
+  <a href="index.html">Главная</a>
+  <a href="catalog.html">Каталог</a>
+  <a href="reviews.html">Отзывы</a>
+</nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero fade-up">
+      <div class="hero-grid">
+        <div>
+          <h1 class="h1"><span class="layer">Layer</span><span class="craft">Craft</span> — мастерская 3D‑печати</h1>
+          <p class="subtitle">Создаём коллекционные фигурки, игрушки и дизайнерские светильники с высокой детализацией. Печатаем на парке 30+ принтеров, работаем с PLA/PETG/TPU.</p>
+          <div class="cta-row">
+            <a href="catalog.html" class="btn btn-primary">Выбрать изделие</a>
+            <a href="reviews.html" class="btn btn-outline">Отзывы</a>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Почему мы?</h3>
+          <div class="kv">
+            <div><b>Опыт</b>Работаем с 2020 года</div>
+            <div><b>Мощность</b>Ферма 30+ принтеров</div>
+            <div><b>Материалы</b>PLA / PETG / TPU</div>
+            <div><b>Формат</b>В наличии и под заказ</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="section fade-up">
+      <h2>Популярные товары</h2>
+      <div class="grid" id="cards"></div>
+      <div class="cta-strip">
+        <p>📦 Хотите оптовую партию или кастомный дизайн?</p>
+        <a href="https://t.me/LayerCraft_ru" target="_blank" class="btn btn-primary">💬 Связаться с менеджером</a>
+      </div>
+    </section>
+    <dialog>
+      <div>
+        <div>
+          <span><section></section></span>
+        </div>
+      </div>
+    </dialog>
+    <section class="section fade-up">
+      <h2>Отзывы покупателей</h2>
+      <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start; margin-bottom:16px;">
+        <div class="reviewSummary">
+          <div class="reviewSummary-score" id="homeAvgScore">0.0</div>
+          <div class="reviewSummary-stars" id="homeAvgStars"></div>
+          <div class="reviewSummary-meta" id="homeAvgMeta">на основе 0 отзывов</div>
+        </div>
+        <a href="reviews.html" class="btn btn-outline btn-sm">Все отзывы →</a>
+      </div>
+      <div class="homeReviewsBox fade-up">
+        <div id="homeReviews">
+          <div class="homeReviewsViewport"><div class="homeReviewsTrack" id="homeReviewsTrack"></div></div>
+          <button class="homeReviewsArrow left" data-prev aria-label="Предыдущий" style="position:absolute; top:50%; left:8px; transform:translateY(-50%); z-index:5; background:var(--surface); border:1px solid var(--border); border-radius:50%; width:36px; height:36px; cursor:pointer;">‹</button>
+          <button class="homeReviewsArrow right" data-next aria-label="Следующий" style="position:absolute; top:50%; right:8px; transform:translateY(-50%); z-index:5; background:var(--surface); border:1px solid var(--border); border-radius:50%; width:36px; height:36px; cursor:pointer;">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-up">
+      <div class="cta-strip" style="background: linear-gradient(135deg, rgba(236,72,153,0.08), rgba(59,130,246,0.08)); border-color: transparent;">
+        <div>
+          <h3 style="margin:0 0 8px; font-size:22px">Оставь отзыв — получи скидку 5%</h3>
+          <p style="margin:0; color:var(--text-secondary)">Напиши пару строк о заказе, прикрепи фото. После модерации отзыв появится на сайте, а мы вышлем промокод.</p>
+        </div>
+        <a href="reviews.html" class="btn btn-primary">🎁 Оставить отзыв</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container cols">
+      <div>
+        <div class="brand" style="margin-bottom:12px">
+          <div class="name"><span class="layer">Layer</span><span class="craft">Craft</span></div>
+        </div>
+        <p>3D‑печать коллекционных игрушек и дизайнерских светильников.<br>© Copyright 2026 LayerCraft</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom:8px">Контакты</h4>
+        <p><a href="tel:+79955081153">...</a></p>
+        <p><a href="mailto:layer.craft.ru@gmail.com">...</a></p>
+        <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap">
+          <a href="https://www.ozon.ru/seller/layercraft-3144581/" target="_blank" class="btn btn-sm btnOzon">Ozon</a>
+          <a href="https://www.wildberries.ru/seller/250129485" target="_blank" class="btn btn-sm btnWB">Wildberries</a>
+          <a href="https://www.avito.ru/brands/c51daeecdbfca92e6daad98a9b8882f1" target="_blank" class="btn btn-sm btnAvito">Avito</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floatContacts">
+  <a href="https://t.me/LayerCraft_admin" target="_blank" class="floatBtn floatTg">
+    <img src="./assets/telegram.png" alt="Telegram" class="floatIcon">
+    <span class="floatText">Telegram: спросить</span>
+  </a>
+  <a href="https://www.avito.ru/brands/c51daeecdbfca92e6daad98a9b8882f1" target="_blank" class="floatBtn floatAvito">
+    <img src="./assets/avito.png" alt="Avito" class="floatIcon">
+    <span class="floatText">Оформить заказ</span>
+  </a>
+</div>
+  <div class="modalBackdrop" id="modalBackdrop">
+    <div class="modal">
+      <button class="modalCloseX" data-close>×</button>
+      <div class="modalCol">
+        <div class="modalImgBox"><img id="modalImage" src="" alt=""></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+          <button class="btn btn-sm btn-outline" id="modalPrev">‹</button>
+          <span id="modalCounter" style="font-size:13px; color:var(--text-secondary)">1 из 1</span>
+          <button class="btn btn-sm btn-outline" id="modalNext">›</button>
+        </div>
+      </div>
+      <div class="modalCol">
+        <h3 class="modalTitle" id="modalTitle">Товар</h3>
+        <p class="modalText" id="modalText"></p>
+        <div class="modalSpecs" id="modalSpecs"></div>
+        <div class="modalLinks">
+          <a class="btnWB" id="modalWb" href="#" target="_blank" rel="noopener"><span>WB</span></a>
+          <a class="btn btnOzon" id="modalOzon" href="#" target="_blank" rel="noopener"><span>Ozon</span></a>
+          <a class="btn btnAvito" id="modalAvito" href="#" target="_blank" rel="noopener"><span>Avito</span></a>
+          <div style="grid-column: span 3; font-size: 12px; color: var(--text-secondary); text-align: center; margin-top: 4px;">
+            Наличие и актуальные цены уточняйте на площадке
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imgModalBackdrop" id="imgModalBackdrop">
+    <div class="imgModal">
+      <button class="imgModalClose" id="imgModalClose">×</button>
+      <img class="imgModalImg" id="imgModalImg" src="" alt="Фото отзыва">
+    </div>
+  </div>
+  <script type="module" src="js/catalog-rtdb.js"></script>
+  <script type="module" src="js/home-reviews.js"></script>
+  <script type="module" src="js/bundle.js"></script>
+  <script src="https://widget.divechat.ru/dive-widget.iife.js?apiKey=228bf8bf88abc428ab9cabc4fe6a350cc28b2602" async></script>
+  <noscript></noscript>
+</body>
+</html>
