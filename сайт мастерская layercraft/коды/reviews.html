@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы — LayerCraft</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="deco-container">
+    <div class="deco-hex"></div>
+    <div class="deco-hex"></div>
+    <div class="deco-hex"></div>
+    <div class="deco-extrude"></div>
+    <div class="deco-layers"></div>
+  </div>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="./favicon.png" alt="LayerCraft">
+        <div class="name"><span class="layer">Layer</span><span class="craft">Craft</span></div>
+      </a>
+      <nav class="menu">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="reviews.html" class="active">Отзывы</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container-narrow fade-up" style="padding:40px 0 80px">
+    <h1 style="margin-bottom:24px">Отзывы покупателей</h1>
+    <div class="reviewFormSection" style="display:grid; grid-template-columns: 1fr 1.2fr; gap:24px; margin-bottom:40px">
+      <div class="reviewSummary reviewLinksBlock">
+        <div class="reviewSummary-score" id="homeAvgScore">0.0</div>
+        <div class="reviewSummary-stars" id="homeAvgStars"></div>
+        <div class="reviewSummary-meta" id="homeAvgMeta">на основе 0 отзывов</div>
+        <div class="review-links-row" style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn btnOzon" href="https://www.ozon.ru/seller/layercraft-3144581/" target="_blank" rel="noopener">Отзывы на Ozon</a>
+          <a class="btn btnAvito" href="https://www.avito.ru/brands/c51daeecdbfca92e6daad98a9b8882f1" target="_blank" rel="noopener">Отзывы на Avito</a>
+          <a class="btn btnWB" href="https://www.wildberries.ru/seller/250129485" target="_blank" rel="noopener">Отзывы на WB</a>
+        </div>
+      </div>
+      <div class="form reviewFormBlock">
+        <h3 style="margin:0 0 16px">Оставить отзыв</h3>
+        <p style="margin-bottom:16px; color:var(--text-secondary); font-size:14px">Отзыв появится на сайте после модерации.</p>
+        <form id="reviewForm">
+          <label>Ваше имя<input name="name" type="text" placeholder="Иван" required maxlength="40"></label>
+          <label>Оценка
+            <div class="stars" id="ratingRow">
+              <button type="button" data-star="1">★</button>
+              <button type="button" data-star="2">★</button>
+              <button type="button" data-star="3">★</button>
+              <button type="button" data-star="4">★</button>
+              <button type="button" data-star="5" class="active">★</button>
+            </div>
+            <div style="font-size:12px; color:var(--text-secondary); margin:4px 0 12px">Выбрано: <span id="ratingValue">5</span>/5</div>
+          </label>
+          <label>Текст отзыва<textarea name="text" placeholder="Расскажите о качестве и впечатлениях..." required maxlength="2000"></textarea></label>
+          <label>Фото <input name="photo" type="file" accept="image/*" style="padding:8px"></label>
+          <button type="submit" class="btn btn-primary" style="margin-top:16px; width:100%">📤 Отправить на модерацию</button> 
+        </form>
+      </div>
+    </div>
+    <h2>Опубликованные отзывы</h2>
+    <div id="approvedList" style="margin-top:16px; display:grid; gap:16px"></div>
+  </main>
+  <footer class="footer">
+    <div class="container cols">
+      <div>
+        <div class="brand" style="margin-bottom:12px">
+          <div class="name"><span class="layer">Layer</span><span class="craft">Craft</span></div>
+        </div>
+        <p>3D‑печать коллекционных игрушек и дизайнерских светильников.<br>© Copyright 2026 LayerCraft</p>
+      </div>
+      <div>
+        <div>
+          <div>
+            <h4 style="margin-bottom:8px">Контакты</h4>
+            <p><a href="tel:+79955081153">...</a></p>
+            <p><a href="mailto:layer.craft.ru@gmail.com">...</a></p>
+            <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap">
+              <a href="https://www.ozon.ru/seller/layercraft-3144581/" target="_blank" class="btn btn-sm btnOzon">Ozon</a>
+              <a href="https://www.wildberries.ru/seller/250129485" target="_blank" class="btn btn-sm btnWB">Wildberries</a>
+              <a href="https://www.avito.ru/brands/c51daeecdbfca92e6daad98a9b8882f1" target="_blank" class="btn btn-sm btnAvito">Avito</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="floatContacts">
+    <a href="https://t.me/LayerCraft_admin" target="_blank" class="floatBtn floatTg">
+      <img src="./assets/telegram.png" alt="Telegram" class="floatIcon">
+      <span class="floatText">Telegram: спросить</span>
+    </a>
+    <a href="https://www.avito.ru/brands/c51daeecdbfca92e6daad98a9b8882f1" target="_blank" class="floatBtn floatAvito">
+      <img src="./assets/avito.png" alt="Avito" class="floatIcon">
+      <span class="floatText">Оформить заказ</span>
+    </a>
+  </div><br/>
+  <div class="imgModalBackdrop" id="imgModalBackdrop">
+    <div class="imgModal">
+      <button class="imgModalClose" id="imgModalClose">×</button>
+      <img class="imgModalImg" id="imgModalImg" src="" alt="Фото отзыва">
+    </div>
+  </div>
+  <noscript> <abbr><div><dialog><type:None>///</type:None></dialog></div></abbr></noscript>
+  <script type="module" src="js/reviews-rtdb.js"></script>
+  <script type="module" src="js/bundle.js"></script>
+  <script src="https://widget.divechat.ru/dive-widget.iife.js?apiKey=228bf8bf88abc428ab9cabc4fe6a350cc28b2602" async></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>LayerCraft — Модерация отзывов</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="./assets/logo.jpg" alt="LayerCraft logo" />
+        <div class="name"><span class="layer">Layer</span><span class="craft">Craft</span></div>
+      </a>
+      <nav class="menu">
+        <a href="index.html">Главная</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="admin-catalog.html">Каталог (админ)</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container section">
+    <h2>Модерация отзывов</h2>
+    <div id="adminGate" class="form" style="max-width:520px">
+      <h3 style="margin-top:0">Вход</h3>
+      <form id="adminLogin">
+        <label>Email</label>
+        <input name="email" type="email" required />
+        <label>Пароль</label>
+        <input name="password" type="password" required />
+        <div style="margin-top:14px">
+          <button class="btn btnPrimary" type="submit">Войти</button>
+        </div>
+        <div class="small" style="margin-top:10px">Доступ только для владельца.</div>
+      </form>
+    </div>
+    <div id="adminPanel" style="display:none">
+      <div class="ctaRow" style="margin-top:14px">
+        <a class="btn btnGhost" href="admin-catalog.html">Перейти в каталог</a>
+      </div>
+      <div class="reviewWrap" style="margin-top:16px">
+        <div>
+          <h3>На модерации</h3>
+          <div id="pendingList" class="reviewList"></div>
+        </div>
+        <div>
+          <h3>Опубликованные</h3>
+          <div id="approvedAdminList" class="reviewList"></div>
+        </div>
+      </div>
+      <div style="margin-top:14px">
+        <button id="logoutBtn" class="btn btnGhost">Выйти</button>
+      </div>
+    </div>
+  </main>
+  <script defer src="./js/bundle.js"></script>
+  <script type="module" src="./js/admin-rtdb.js"></script>
+</body>
+</html>

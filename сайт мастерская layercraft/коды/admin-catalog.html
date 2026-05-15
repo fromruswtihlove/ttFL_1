@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LayerCraft — Каталог (админ)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="./assets/logo.jpg" alt="LayerCraft logo" />
+        <div class="name"><span class="layer">Layer</span><span class="craft">Craft</span></div>
+      </a>
+      <nav class="menu">
+        <a href="index.html">Главная</a>
+        <a href="admin.html">Админка (отзывы)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Каталог — управление товарами</h2>
+
+    <div id="adminGate" class="form" style="max-width:520px">
+      <h3 style="margin-top:0">Вход</h3>
+      <form id="adminLogin">
+        <label>Email</label>
+        <input name="email" type="email" required />
+        <label>Пароль</label>
+        <input name="password" type="password" required />
+        <div style="margin-top:14px">
+          <button class="btn btnPrimary" type="submit">Войти</button>
+          <a class="btn btnGhost" href="admin.html">← Назад</a>
+        </div>
+        <div class="small" style="margin-top:10px">Доступ только для владельца.</div>
+      </form>
+    </div>
+
+    <div id="adminPanel" style="display:none">
+      <div class="ctaRow" style="justify-content:space-between; margin-top:14px">
+        <a class="btn btnGhost" href="admin.html">← К отзывам</a>
+        <button id="logoutBtn" class="btn btnGhost" type="button">Выйти</button>
+      </div>
+
+      <div class="reviewWrap" style="margin-top:16px">
+        <div class="panel">
+          <h3 class="panelTitle">Добавить / изменить товар</h3>
+
+          <form id="productForm" class="form">
+            <input type="hidden" name="productId" />
+
+            <label>Название</label>
+            <input name="title" required />
+
+            <label>Короткое описание</label>
+            <textarea name="short" required></textarea>
+
+            <label>Размеры</label>
+            <input name="size" />
+
+            <label>Материал</label>
+            <input name="material" />
+
+            <label>Срок</label>
+            <input name="term" />
+
+            <label>Наличие (шт)</label>
+            <input name="qty" type="number" min="0" step="1" value="0" />
+            <dialog>
+            <form>
+              <selectedcontent>
+                            <label>Полное описание</label>
+            <textarea name="full"></textarea>
+            <label>Ссылка на Avito</label>
+            <input name="avitoUrl" type="url" placeholder="https://www.avito.ru/..." />
+            <label>Ozon</label>
+            <input name="ozonUrl" type="url" placeholder="https://www.ozon.ru/...">
+            <label>Ссылка на Wildberries</label><input type="url" name="wbUrl" placeholder="https://www.wildberries.ru/catalog/...">
+            <label>Фото (можно несколько, jpg/png/webp)</label>
+            <input name="photos" type="file" accept="image/*" multiple />
+            <label style="margin-top:12px;">
+              <input name="published" type="checkbox" />
+              Опубликован
+            </label>
+              </selectedcontent>
+            </form>
+            </dialog>
+            <div class="ctaRow">
+              <button id="saveBtn" class="btn btnPrimary" type="submit">Сохранить</button>
+              <button id="resetBtn" class="btn btnGhost" type="button">Очистить</button>
+            </div>
+            <div class="small" id="formHint" style="margin-top:10px">Для редактирования нажми “Изменить” у товара.</div>
+          </form>
+        </div>
+        <div class="panel">
+          <h3 class="panelTitle">Список товаров</h3>
+          <div class="kv" style="margin-bottom:12px;">
+            <div><b>Опубликованные</b><span id="publishedCount">0</span></div>
+            <div><b>Не опубликованные</b><span id="unpublishedCount">0</span></div>
+          </div>
+          <h4 style="margin:10px 0 8px;">Опубликованные</h4>
+          <div id="publishedList" class="reviewList"></div>
+          <h4 style="margin:16px 0 8px;">Не опубликованные</h4>
+          <div id="unpublishedList" class="reviewList"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script defer src="./js/bundle.js"></script>
+  <script type="module" src="./js/admin-catalog.js"></script>
+</body>
+</html>
